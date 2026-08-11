@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plot-workflows"
+version = "0.1.4"
+description = "Schema-neutral analysis and plotting workflow primitives"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "numpy>=1.24",
+    "eigenmode-analysis>=0.2.10,<0.3",
+    "plot-foundation>=0.1.11,<0.2",
+]
+
+[project.optional-dependencies]
+campaign = ["campaign-data>=0.1,<0.2"]
+multislice = [
+    "pandas>=1.5",
+    "matplotlib>=3.7",
+    "scipy>=1.10",
+]
+batch = [
+    "pandas>=1.5",
+    "svgutils>=0.3",
+    "Pillow>=9",
+]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
