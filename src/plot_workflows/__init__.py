@@ -5,7 +5,7 @@ projects remain responsible for translating their DataFrames, manifests,
 physical policies, and output paths into these contracts.
 """
 
-__version__ = "0.1.4"
+__version__ = "0.1.5"
 
 from .plotting import band_plot_spec_from_payloads, render_band_payloads
 from .filtering import advanced_filter_eigensolution

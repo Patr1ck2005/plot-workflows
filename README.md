@@ -9,6 +9,12 @@ surface plot specifications, reusable Visualizer lifecycle, batch composition,
 and quasi-3D multislice workflows. Callers provide schema adapters, readers,
 manifests, and output directories.
 
+Plot selection follows the canonical
+[Data Space and Visualization Views](docs/data-space-and-visualization.md)
+specification: classify intrinsic dimension and sampling topology first, then
+choose compatible views. A 3D surface is a view of 2D data, not evidence of
+dense 3D sampling.
+
 Band, heatmap, multi-surface, and Visualizer composition accept a Plot
 Foundation `style_profile`. Use `diagnostic` for exploratory output and
 `publication_minimal` for A-derived compact paper figures. Plot Workflows maps

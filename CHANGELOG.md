@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.5
+
+- Added the canonical intrinsic-data-dimension and sampling-topology decision
+  specification without changing the public plotting API.
+- Documented compatible views for 1D, 2D, dense 3D, quasi-2D, and quasi-3D
+  data, including the distinction between a 2D field and a 3D surface view.
+- Added guardrail examples for shared 2D heatmap/surface inputs and the four
+  quasi-3D multislice view families.
+- Raised the Plot Foundation floor to `0.1.12`.
+- Included the canonical specification, Agent instructions, and tests in the
+  sdist and modernized MIT SPDX metadata for clean public builds.
+
 ## 0.1.4
 
 - Published schema-neutral tracking, plotting, visualization, batch, and

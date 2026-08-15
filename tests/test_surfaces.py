@@ -48,3 +48,14 @@ def test_multi_surface_spec_is_renderable_without_opening_window():
     assert title == ""
     assert color_name == "f_thz"
     plt.close("all")
+
+
+def test_same_2d_payload_supports_heatmap_and_surface_specs_with_one_orientation():
+    payload = Payload(np.array([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]))
+
+    heatmap = surface_heatmap_spec_from_payload(payload)
+    surface, _, _ = multi_surface_spec_from_payloads([payload])
+
+    assert heatmap.values.shape == (len(payload.x_grid), len(payload.y_grid))
+    assert surface.layers[0].z.shape == heatmap.values.shape
+    np.testing.assert_array_equal(surface.layers[0].z, heatmap.values)
