@@ -18,9 +18,12 @@ dimension and sampling topology, then enumerate compatible views. Rendering
 dimension does not determine data dimension: the same 2D scalar grid may be a
 heatmap or a 3D surface. Follow the canonical
 [Data Space and Visualization Views](docs/data-space-and-visualization.md)
-specification and report its six-field Agent decision record. Select a primary
-view and only useful supplementary views; do not generate every candidate by
-default.
+specification and report its seven-field Agent decision record. If an analysis
+operator reduces the raw object first, also report the raw space, operator,
+derived coordinates/quantity, and validity or continuity rules. A peak ridge
+or slice-wise extrema trajectory may be derived 1D data even when rendered as
+a surface or 3D trajectory. Select a primary view and only useful
+supplementary views; do not generate every candidate by default.
 
 ## Development
 

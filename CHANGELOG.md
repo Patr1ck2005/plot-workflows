@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.6
+
+- Added the analysis-space transformation layer to the canonical data-space
+  specification: raw data space -> explicit transformation -> derived
+  coordinates/quantity -> visualization view, with direct raw-data views kept
+  as a first-class path.
+- Documented reduction, lift/expansion, same-dimensional transforms, channel
+  expansion, model-derived responses, and transformation provenance without
+  adding a public analysis API.
+- Added characterization cases for a 2D angle-frequency field reduced to a 1D
+  ridge, a quasi-3D slice family reduced to a 1D extrema trajectory, and a
+  point eigenfrequency lifted to a sampled frequency response.
+
 ## 0.1.5
 
 - Added the canonical intrinsic-data-dimension and sampling-topology decision
