@@ -1,5 +1,6 @@
 from abc import ABC
 
+import matplotlib.pyplot as plt  # noqa: F401  (plot_on_poincare_sphere uses plt.Normalize)
 import numpy as np
 
 from .visualization import (

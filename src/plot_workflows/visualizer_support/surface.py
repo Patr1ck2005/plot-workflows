@@ -145,7 +145,15 @@ def plot_advanced_surface(
         ax=ax,
     )
     _apply_collection_options(result.artists, kwargs)
-    return ax, result.artists[0]
+    # Standalone colorbar mappable: the surface artist deliberately carries no
+    # color array (see plot_foundation.render_multi_surface_3d), so hand back
+    # an empty ScalarMappable with the same norm/cmap as the s3d path does.
+    mappable = ScalarMappable(
+        norm=_auto_norm(z2, z2_cfg.get("vmin"), z2_cfg.get("vmax")),
+        cmap=mpl.colormaps.get_cmap(mapping.get("cmap", "hot")),
+    )
+    mappable.set_array([])
+    return ax, mappable
 
 
 def s3d_build_planar_surface_from_arrays(

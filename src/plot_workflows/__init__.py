@@ -5,8 +5,9 @@ projects remain responsible for translating their DataFrames, manifests,
 physical policies, and output paths into these contracts.
 """
 
-__version__ = "0.1.6"
+__version__ = "0.1.7"
 
+from .compose import compose_png_grid, find_default_font
 from .plotting import band_plot_spec_from_payloads, render_band_payloads
 from .filtering import advanced_filter_eigensolution
 from .grid import (
@@ -70,6 +71,8 @@ __all__ = [
     "TrackingWorkflowResult",
     "band_plot_spec_from_payloads",
     "render_band_payloads",
+    "compose_png_grid",
+    "find_default_font",
     "advanced_filter_eigensolution",
     "create_data_grid",
     "query_data_grid",
