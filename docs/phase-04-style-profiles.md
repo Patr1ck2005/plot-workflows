@@ -20,16 +20,18 @@ Primary helpers are `resolve_plot_profile`, `axes_spec_for_profile`, and
 ## Physical-size delivery
 
 For A4 portrait / PowerPoint delivery, follow the canonical
-[Plot Foundation style policy](../../plot-foundation/docs/style-policy.md#a4-paper-delivery)
+[Plot Foundation style policy](D:/Dev/Projects/Work/plot-foundation/docs/style-policy.md#a4-paper-delivery)
 in the adjacent local checkout.
 That document owns the current font size, tick direction, A4 column calibration,
-compact panel geometry and complete-paper figure requirements. Its 2026-09-26
-update replaces the earlier typography/assembly guidance; do not maintain
-another numerical style policy in this workflow document.
+compact panel geometry and optional delivery scopes. Its 2026-09-26
+clarification separates baseline panel standards from optional assembly;
+do not maintain another numerical style policy in this workflow document.
 
-Composition must preserve the intended physical size and font size. Required
-outputs include reusable discrete panels plus their size manifest. A
-complete-paper figure task also delivers agent-designed main/supplementary
+The baseline is reusable discrete panels at their intended physical size and
+font size, with size/source information in the existing manifest or config.
+Users can insert and compose these panels themselves in PowerPoint. Requested
+selection/composition preserves this same geometry; only an explicit
+complete-paper figure task delivers agent-designed main/supplementary
 composites and editable sources, following the canonical policy. Many useful
 panels are compatible with a compact final layout; panel count is not the
 reason to enlarge individual canvases or shrink lettering.
