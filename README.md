@@ -9,6 +9,16 @@ surface plot specifications, reusable Visualizer lifecycle, batch composition,
 and quasi-3D multislice workflows. Callers provide schema adapters, readers,
 manifests, and output directories.
 
+## Documentation by task
+
+| Task | Entry |
+|---|---|
+| Identify raw/derived data spaces and choose views | [Canonical data-space specification](docs/data-space-and-visualization.md) |
+| Apply styles and compose article figures | [Style-profile adaptation](docs/phase-04-style-profiles.md); [canonical figure-delivery policy](D:/Dev/Projects/Work/plot-foundation/docs/style-policy.md#a4-paper-delivery) |
+| Use Visualizers, batch or multislice interfaces | [Public API](docs/public-api.md) |
+| Maintain the package and consumer boundary | [Agent rules](AGENTS.md) |
+| Follow the personal research system | [MyPhysics system entry](D:/Obsidian/MyPhysics/System/README.md); project semantics remain with callers |
+
 Plot selection follows the canonical
 [Data Space and Visualization Views](docs/data-space-and-visualization.md)
 specification: classify intrinsic dimension and sampling topology first, then

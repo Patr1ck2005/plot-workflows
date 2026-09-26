@@ -16,3 +16,23 @@ may override geometry/DPI at their adapter boundaries.
 
 Primary helpers are `resolve_plot_profile`, `axes_spec_for_profile`, and
 `figure_spec_for_profile`. All tests use a headless Matplotlib backend.
+
+## Physical-size delivery
+
+For A4 portrait / PowerPoint delivery, follow the canonical
+[Plot Foundation style policy](../../plot-foundation/docs/style-policy.md#a4-paper-delivery)
+in the adjacent local checkout.
+That document owns the current font size, tick direction, A4 column calibration,
+compact panel geometry and complete-paper figure requirements. Its 2026-09-26
+update replaces the earlier typography/assembly guidance; do not maintain
+another numerical style policy in this workflow document.
+
+Composition must preserve the intended physical size and font size. Required
+outputs include reusable discrete panels plus their size manifest. A
+complete-paper figure task also delivers agent-designed main/supplementary
+composites and editable sources, following the canonical policy. Many useful
+panels are compatible with a compact final layout; panel count is not the
+reason to enlarge individual canvases or shrink lettering.
+For exact-size output, use the existing `SaveSpec` override with
+`bbox_inches=None`, and verify the actual exported dimensions. Enlarged
+diagnostic geometry is not the default PowerPoint delivery geometry.
