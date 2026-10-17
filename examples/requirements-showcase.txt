@@ -1,0 +1,9 @@
+# Pinned public source revisions. Python >=3.10 and Git are required.
+# campaign-data 0.2.0 is deliberately independent of the older [campaign] extra.
+# Workflows 0.1.7 multislice still calls cm.get_cmap, removed in Matplotlib 3.11.
+matplotlib==3.10.9
+eigenmode-analysis @ git+https://github.com/Patr1ck2005/eigenmode-analysis.git@e172495aa0c561cf0edf251ae9828dd5e54d2d64
+plot-foundation @ git+https://github.com/Patr1ck2005/plot-foundation.git@c3d3cc23b2bb4da7ade7e5edf553d4a36d19db7f
+plot-workflows[multislice] @ git+https://github.com/Patr1ck2005/plot-workflows.git@b5377465d424b1b48388a44071419b1d6f6796d5
+campaign-data @ git+https://github.com/Patr1ck2005/campaign-data.git@6e95d9de5e814620294143bb365daf1f5187f541
+

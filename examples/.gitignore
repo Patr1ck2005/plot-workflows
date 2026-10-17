@@ -1,0 +1,3 @@
+.venv*/
+.release-readiness/
+__pycache__/

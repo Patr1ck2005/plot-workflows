@@ -1,0 +1,134 @@
+{
+  "evidence_type": "computed synthetic software demonstration",
+  "data_origin": "independent generic mathematical definitions in source; no research data",
+  "seed": 1729,
+  "source": "../../../examples/synthetic_end_to_end.py",
+  "source_sha256": "554e5c8ef20a33827fa46ef811830cddcc14acef9c51a12e34440941e67e255a",
+  "helper_sha256": "b631e717eb2ff96fffac5fc20e7e681736eeb4cdcac6f1854ff9539c9c16adc6",
+  "generation_command": "python examples/synthetic_end_to_end.py --out docs/assets/showcase",
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.9",
+    "pandas": "3.0.6",
+    "eigenmode-analysis": "0.2.10",
+    "plot-foundation": "0.1.13",
+    "plot-workflows": "0.1.7",
+    "campaign-data": "0.2.0"
+  },
+  "installed_artifacts": {
+    "eigenmode-analysis": {
+      "archive_sha256": "483af0d204d83e9d1425659468391c4219eb43b40644a556a1b7b0372260d864",
+      "vcs_commit_id": null
+    },
+    "plot-foundation": {
+      "archive_sha256": "5cd802037963d14b986fc911f102b9031d4b58b0c8bbac5d98d0cb551400e732",
+      "vcs_commit_id": null
+    },
+    "plot-workflows": {
+      "archive_sha256": "829e63d6bdfda7b9a94bf30820e58b7c5689480df985d24b22fa761dd0b909f2",
+      "vcs_commit_id": null
+    },
+    "campaign-data": {
+      "archive_sha256": "b1503f8c4a286e4dea4541dc8f2a4be4f76069bc0a01a6975185243a3aa44c79",
+      "vcs_commit_id": null
+    }
+  },
+  "conventions": "All axes are dimensionless. The two synthetic branches are 1.2 ± sqrt((0.28t)²+0.07²). Q and S3 are independent illustrative channels, not inferred from the eigenvalues. Five Gaussian slices are sampled at s=0,0.25,0.5,0.75,1; there is no dense volume or interpolation between slices. Color on slices is amplitude in [0,1]. Maxima are discrete sample maxima, not mode identities. Workflow surface payloads are y-first and are transposed once by the adapter into foundation x-first specs.",
+  "data_space_decisions": [
+    {
+      "intrinsic_dimension": "1D",
+      "sampling_topology": "ordered path",
+      "parameter_space": "generic scalar parameter",
+      "quantity": "synthetic frequency, Q and S3",
+      "compatible_views": [
+        "bands",
+        "log lines",
+        "signed lines"
+      ],
+      "selected_views": "common band/Q/polarization family",
+      "transformation_status": "candidate assignment preserves independent coordinate; Q and S3 are caller-supplied analytic channels"
+    },
+    {
+      "intrinsic_dimension": "quasi-3D",
+      "sampling_topology": "five sparse 2D regular slices",
+      "parameter_space": "x,y plus slice parameter s",
+      "quantity": "Gaussian amplitude",
+      "compatible_views": [
+        "per-slice heatmap",
+        "stacked slices",
+        "extrema trajectory",
+        "projection"
+      ],
+      "selected_views": "stacked slices, three representative heatmaps, sampled-maxima projection",
+      "transformation_status": "raw-plus-derived comparison; maxima reduce each slice to one sampled coordinate pair; no interpolation"
+    }
+  ],
+  "checks": {
+    "audit_source_sha256": "3d41822a78af1b47ff2a8092da584993aff8ec517799dde77beb58984ebc4dbe",
+    "audit_source_unchanged": true,
+    "audited_points": "11/12",
+    "tracking_coverage": 1.0,
+    "tracking_expected_values_match": true,
+    "profile_arrays_identical": true,
+    "slice_count": 5,
+    "slice_shape": [
+      43,
+      31
+    ],
+    "maxima_within_half_grid_step": true,
+    "payload_adapter_orientation_verified": true,
+    "all_assertions_passed": true
+  },
+  "style": "explicit documentation geometry; 180 DPI preview; fixed canvas; Arial 8/9 pt",
+  "images": [
+    {
+      "stem": "hero",
+      "title": "A coherent band / Q / polarization family",
+      "caption": "All panels use the same tracked parameter path and branch colors; Q and S3 are independently defined example observables.",
+      "size_mm": [
+        210.0,
+        73.0
+      ],
+      "dpi": 180,
+      "png_sha256": "7b4a795ae66dfac9223d677abd81abbdba049f7e06c5e6028eabc9c3b782f4f2",
+      "svg_sha256": "3e024d1ef007a3c5e4f158c5d14ea7bbc532d83994fbd74c03f19d9fc10768d2"
+    },
+    {
+      "stem": "style-profiles",
+      "title": "Same arrays, two presentation policies",
+      "caption": "The workflow maps diagnostic and publication_minimal profiles into specs. Essential labels are explicitly restored for this standalone gallery; numerical values are identical.",
+      "size_mm": [
+        210.0,
+        73.0
+      ],
+      "dpi": 180,
+      "png_sha256": "bdd61cacbc72e544a54bc8271ade70d837b92c3d1343fd7a7dd5e9db0af37e78",
+      "svg_sha256": "ba8b83d13d39ad6ea19eeb9924087b467cae1234a6c4a7f63be55d840e31cc16"
+    },
+    {
+      "stem": "multislice",
+      "title": "Five 2D slices in a quasi-3D view",
+      "caption": "Physical slice positions are retained. Each plane shows only its own grid, with a shared [0,1] color scale; no volume is inferred.",
+      "size_mm": [
+        210.0,
+        98.0
+      ],
+      "dpi": 180,
+      "png_sha256": "1495fd10f8abf5a840dcfa607e580176f369d05ef36431b3f26eb9eef03af294",
+      "svg_sha256": "89979c2f8a5788924be2e6690c7b1d79a39938cd7d9e528672c0b60bf29f7c8f"
+    },
+    {
+      "stem": "slice-projection",
+      "title": "Raw slices and derived sampled maxima",
+      "caption": "Three of five raw slices are shown above; all five sampled maxima are shown below. Connecting segments guide the eye and do not add sampled data.",
+      "size_mm": [
+        210.0,
+        98.0
+      ],
+      "dpi": 180,
+      "png_sha256": "c73be336e1d67576187b282dee2dc8d1534970f1886fdf340c952c43d8406a98",
+      "svg_sha256": "526c41088894eac4ae43cdaa73e9c4972a8142e5ac79f4f4dc26beecb3d1c99c"
+    }
+  ]
+}
